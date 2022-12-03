@@ -1,21 +1,12 @@
-const { readFileSync, writeFileSync, readFile } = require('fs')
+// npm - global command, comes with node
+// npm --version
 
-readFile('./content/first.txt', 'utf8', (err, result) ==>{
-    if (err) {
-        console.log(err)
-        return
-    }
-    const seconds = result;
-    readFile('./content/secondtxt', 'utf8', (err,result)==>;
-        'Here is the result : ${first}, {second}`,
-        (err, result) => {
-            if (err) {
-                console.log(err)
-                return
-            }
-            console first = result;
-            readFile('./content/second.txt',utf8')
-        }
-    )
-})
-})
+// local dependecy - use it only in this particular project
+// npm i <packagename>
+
+// global dependency - use it in any project
+// npm install -g <packagename> (mac)
+
+//package.json - manifest file (store important info about project/package)'
+//manual approach (create package.json in the root, create properties etc)
+//npm init -y (everthing default)
