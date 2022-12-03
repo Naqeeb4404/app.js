@@ -1,9 +1,15 @@
-const amount = 9
+const {createReadStream} = require('fs')
 
-if (amount < 10) {
-    console.log('small number')
-} else {
-    console.log('large number')
-}
+const stream = createReadStream('../content/big.txt', {
+    highWaterMark: 90000,
+})
 
-console.log('hey it`s my first node app!!!')
+//default 64kb
+//last buffer - remainder
+//highWaterMark - control size
+//const stream = createReadStream('./content/big.txt', { higtWaterMark:9000 })
+//const stream = createReadStream('../content/big.txt', { encoding: 'utf8'}
+
+stream.on('data', (result) => {
+    console.log(result)
+})
