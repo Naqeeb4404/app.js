@@ -6,7 +6,7 @@ const app = experss()
 
 app.get('/', (req, res) => {
     const method = req.method;
-    const url = req
+    const url = req._construct
     res.json([{ name: 'john '}, { name: 'susan'}])
 })
 
